@@ -27,11 +27,10 @@ run `./tools/setup.sh` (initialises submodules).
 ## Repo shape
 
 - `Source/` — the Tight-WFS application (JUCE gui app). App layer only.
-- `spatcore/` — **submodule**, pinned (currently `9053821` on main — 0.1.1
-  pre-tag, which added the macOS consumer contracts: top-level OBJCXX check +
-  hidapi header staging). Dependency direction is strictly app → spatcore;
-  never modify spatcore from here — changes go to the spatcore repo and
-  arrive via a pin bump.
+- `spatcore/` — **submodule**, pinned to **v0.1.1**. The CMake wiring comes
+  from spatcore's `cmake/SpatcoreConsumer.cmake` helper (see CMakeLists.txt).
+  Dependency direction is strictly app → spatcore; never modify spatcore from
+  here — changes go to the spatcore repo and arrive via a pin bump.
 - `ThirdParty/JUCE` — submodule (JUCE 8, same pin as WFS-DIY / XOA).
 - `ThirdParty/hidapi` — submodule (headers for spatcore-controllers; static
   lib linked into the app via hidapi's own CMake).

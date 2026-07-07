@@ -67,9 +67,9 @@ extraction in mind.
 ## 4. Roadmap
 
 - **P0 — Bootstrap (this repo state).** Submodules (JUCE 8.0.14, spatcore
-  `9053821` / 0.1.1-pre, hidapi 0.15.0), vendored juce_simpleweb +
-  roli_blocks_basics, CMake build of a minimal JUCE app linking the three
-  spatcore libs, GPLv3, 3-OS CI. Scaffold shared 1:1 with XOA.
+  v0.1.1, hidapi 0.15.0), vendored juce_simpleweb + roli_blocks_basics, CMake
+  build (via spatcore's SpatcoreConsumer.cmake helper) of a minimal JUCE app
+  linking the three spatcore libs, GPLv3, 3-OS CI. Scaffold shared 1:1 with XOA.
 - **P1 — Parameter store & schema.** Port WFS-DIY's `WFSValueTreeState`
   pattern; keep the WFS parameter surface (source position, per-output
   delay/level/HF, master, network) but make **max-outputs a runtime bound**
